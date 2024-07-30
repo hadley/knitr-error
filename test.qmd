@@ -1,14 +1,14 @@
 ```{r}
-cat(strrep("-", 80), sep = "", file = stderr())
+cat(strrep("-", 120), "\n", sep = "", file = stderr())
 options(rlang_backtrace_on_error = "full")
 ```
 
 ```{r}
-cat("👍\n", file = stderr())
+cat("\n👍\n", file = stderr())
 f <- function() g()
 g <- function() h()
 h <- function() i()
-i <- function() stop("!")
+i <- function() stop("Error")
 ```
 
 ```{r}
